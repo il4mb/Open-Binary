@@ -3,7 +3,6 @@ class Biner(int) :
     def __init__(self, value : str) :
         self._val = value
 
-
     def doAdd(self, binary : str) :
 
         a = str(self._val)
