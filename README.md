@@ -7,8 +7,8 @@
 Open Binary has a simple code to add and subtract binary numbers
 
 ### Features
-- [x]Adding a binary number to another binary number
-- [x]Subtracting binary numbers from other numbers
+- [x] Adding a binary number to another binary number
+- [x] Subtracting binary numbers from other numbers
 
 ***
 
