@@ -1,7 +1,14 @@
-# Open Binary
-![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/github/tag/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
+[![](https://img.shields.io/badge/Java-Progress-red?style=for-the-badge&logo=java&logoColor=white&labelColor=3776AB)](https://github.com/ilh4mb/Open-Binary)
+[![](https://img.shields.io/badge/PYTHON-Done-1db87c?style=for-the-badge&logo=python&logoColor=white&labelColor=3776AB) ](https://github.com/ilh4mb/Open-Binary)
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+
+# Open Binary ![](https://img.shields.io/badge/OPEN-source-26beff?style=flat-square&logo=java&logoColor=white)
+
+![Issues](https://img.shields.io/github/issues/ilh4mb/open-binary)
+![Build Status](https://img.shields.io/github/checks-status/ilh4mb/open-binary/master)
+![Code Size](https://img.shields.io/github/languages/code-size/ilh4mb/open-binary)
+![Licensi](https://img.shields.io/github/license/ilh4mb/open-binary)
+![Languages](https://img.shields.io/github/languages/count/ilh4mb/open-binary)
 
 **what is Open Binary ?**<br/>
 Open Binary has a simple code to add and subtract binary numbers
