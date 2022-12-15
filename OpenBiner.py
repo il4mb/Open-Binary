@@ -1,10 +1,10 @@
-class Biner(object) :
+class Biner(int) :
 
-    def __init__(self, value) :
+    def __init__(self, value : str) :
         self._val = value
 
 
-    def doAdd(self, binary) :
+    def doAdd(self, binary : str) :
 
         a = str(self._val)
         b = str(binary)
@@ -51,11 +51,10 @@ class Biner(object) :
             if x == 0 and carry > 0 :
                 addition += str(carry)
 
-        self._val = self.__flip__(addition)
-        return self
+        return Biner(self.__flip__(addition))
 
 
-    def doLess(self, binary) :
+    def doLess(self, binary : str) :
         a = str(self._val)
         b = str(binary)
 
@@ -95,11 +94,10 @@ class Biner(object) :
             elif i == 0 and ii == 0 :
                 deducted += '0'
 
-        self._val = self.__flip__(deducted)
-        return self
+        return Biner(self.__flip__(deducted))
 
 
-    def __flip__(self, val) :
+    def __flip__(self, val : str) :
         liva = list(str(val))
         flip = ""
         for x in range(len(liva)-1, -1, -1) :
