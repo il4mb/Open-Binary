@@ -2,12 +2,11 @@ import OpenBiner
 
 binary = OpenBiner.Biner("1010")
 
-print(binary, chr(binary))
+print(binary)
 
-binary = binary.sumWith("1001")
+binary = binary.sumWith("11001")
 
-print(binary, chr(binary))
+#nabil 101101
+#ilham 110100
 
-binary = binary.subWith('1001')
-
-print(binary, chr(binary))
+print(binary)
