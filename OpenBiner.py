@@ -20,22 +20,8 @@ class Biner(int) :
         self._val = value
 
     def sumWith(self, binary : str) :
-
-        a = str(self._val)
-        b = str(binary)
-
-        if(len(a) > len(b)) :
-            newB = ''
-            for x in range(int(len(a) - len(b))) :
-                newB += '0'
-            b = newB + b
-        else :
-            newA = ''
-            for x in range(int(len(b) - len(a))) :
-                newA += '0'
-            a = newA + a
-
-
+        # elements are the same number
+        a , b = self.__match_len__(self._val, binary)
         a = list(a)
         b = list(Biner(b)._val)
 
@@ -49,7 +35,6 @@ class Biner(int) :
 
             if carry > 0 :
                 carry -=1
-
 
             if isum == 3 : 
                 addition += '1'
@@ -70,47 +55,66 @@ class Biner(int) :
 
 
     def subWith(self, binary : str) :
-        a = str(self._val)
-        b = str(binary)
-
-        if(len(a) > len(b)) :
-            newB = ''
-            for x in range(int(len(a) - len(b))) :
-                newB += '0'
-            b = newB + b
-        else :
-            newA = ''
-            for x in range(int(len(b) - len(a))) :
-                newA += '0'
-            a = newA + a
-
-
+        # elements are the same number
+        a , b = self.__match_len__(self._val, binary)
         a = list(a)
         b = list(Biner(b)._val)
 
         deducted = ''
-        carry = 0
+        borrow = 0
 
         for x in range(len(a)-1, -1, -1) :
 
             i, ii = int(a[x]), int(b[x])
 
-            if ii > i :
-                carry = int(a[x-1])
-                a[x-1] = '0'
+            # when it can't be reduced
+            if i < ii :
+
+                # collect unborrowable index elements
+                notEnaught = []
+
+                for _x in range(x, -1, -1) :
+                    if  int(a[_x]) > 0 :
+                        a[_x] = '0' # replace borrowed value to zero
+                        borrow += 1
+                        break # exit loop
+
+                    # add index unborrowable
+                    notEnaught.append(_x)
+
+                # replace unborrowable element to 1
+                for _x in notEnaught :
+                    a[_x] = '1'
 
             if i == 1 and ii == 1 :
                 deducted += '0'
             elif i == 1 and ii == 0 :
                 deducted += '1'
             elif i == 0 and ii == 1 :
-                deducted += str(carry)
-                carry -= 1
+                # this value can't subtracted
+                # so we need to check was borrowed
+                if borrow > 0 : # if borrow is not zero add 1 to value
+                    deducted += '1'
+                    borrow -=1
             elif i == 0 and ii == 0 :
                 deducted += '0'
 
         return Biner(self.__flip__(deducted))
+        
+    def __match_len__(self, str1: str, str2: str ) :
 
+        if(len(str1) > len(str2)) :
+            newB = ''
+            for x in range(int(len(str1) - len(str2))) :
+                newB += '0'
+            str2 = newB + str2
+        elif len(str2) > len(str1) :
+            newA = ''
+            for x in range(int(len(str2) - len(str1))) :
+                newA += '0'
+            str1 = newA + str1
+
+        return str1, str2
 
     def __flip__(self, val : str) :
         liva = list(str(val))
