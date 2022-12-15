@@ -3,7 +3,7 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-**what is Open Binary ?**
+**what is Open Binary ?**<br/>
 Open Binary has a simple code to add and subtract binary numbers
 
 ### Features
