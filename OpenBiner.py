@@ -3,7 +3,7 @@ class Biner(int) :
     def __init__(self, value : str) :
         self._val = value
 
-    def doAdd(self, binary : str) :
+    def sumWith(self, binary : str) :
 
         a = str(self._val)
         b = str(binary)
@@ -53,7 +53,7 @@ class Biner(int) :
         return Biner(self.__flip__(addition))
 
 
-    def doLess(self, binary : str) :
+    def subWith(self, binary : str) :
         a = str(self._val)
         b = str(binary)
 
