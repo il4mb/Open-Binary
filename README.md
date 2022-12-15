@@ -12,6 +12,9 @@ Open Binary has a simple code to add and subtract binary numbers
 
 ***
 
+## HOW TO USE
+just download this code and place it in workspace
+
 ### Simple Use
 import OpenBinary
 ```python
