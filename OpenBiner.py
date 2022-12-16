@@ -53,7 +53,6 @@ class Biner(int) :
 
         return Biner(self.__flip__(addition))
 
-
     def subWith(self, binary : str) :
         # elements are the same number
         a , b = self.__match_len__(self._val, binary)
@@ -122,7 +121,6 @@ class Biner(int) :
         for x in range(len(liva)-1, -1, -1) :
             flip += liva[x]
         return flip
-
 
     def __repr__(self):
         return self._val
