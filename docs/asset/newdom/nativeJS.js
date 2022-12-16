@@ -15,7 +15,8 @@
  * limitations under the License.
  */
 
- export function DOM(
+
+function DOM(
     element = "div",
     data = {
         attr: {},

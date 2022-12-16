@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&weight=900&display=swap");
+.calculator {
+  border: 2px #d5d5d5 solid;
+  border-radius: 15px;
+  min-height: 200px;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 15px 25px;
+  background: #e8e8e8;
+}
+.calculator > .screen {
+  text-align: right;
+  border: none !important;
+  outline: none !important;
+  padding: 10px 20px;
+  width: 100%;
+  font-size: 20px;
+  background: #575757;
+  color: #4193ff;
+  box-shadow: inset 0px 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.calculator > .pad {
+  height: 100%;
+  width: 100%;
+}
+.calculator > .pad > table {
+  border-collapse: separate;
+  border-spacing: 5px;
+  width: 100%;
+  text-align: center;
+}
+.calculator > .pad > table > tr > td {
+  border: 5px transparent solid;
+  background: #222123;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+.calculator > .pad > table > tr > *:hover {
+  color: #4193ff !important;
+}
+.calculator > .pad > table > tr > *:active {
+  transform: scale(0.9);
+  background: #004da0;
+}
+.calculator > * {
+  font-weight: bold;
+  font-family: "Orbitron", sans-serif;
+}/*# sourceMappingURL=style.css.map */
