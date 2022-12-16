@@ -1,4 +1,4 @@
-[![](https://img.shields.io/badge/Java-Done-1db87c?style=for-the-badge&logo=java&logoColor=white&labelColor=3776AB)](https://github.com/ilh4mb/Open-Binary)
+[![](https://img.shields.io/badge/Java-Done-1db87c?style=for-the-badge&logo=java&logoColor=white&labelColor=CF8A00)](https://github.com/ilh4mb/Open-Binary)
 [![](https://img.shields.io/badge/PYTHON-Done-1db87c?style=for-the-badge&logo=python&logoColor=white&labelColor=3776AB)](https://github.com/ilh4mb/Open-Binary)
 
 
