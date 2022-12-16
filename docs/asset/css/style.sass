@@ -10,7 +10,34 @@
     padding: 15px 25px
     background: #e8e8e8
 
+    &>.monitor
+        position: relative
+        max-width: 150px
+        width: 100%
+        height: 35px
+        margin: 15px auto
+        background: repeating-linear-gradient(90deg, transparent, transparent 10px, #3a2761 10px, #3a2761 13px), repeating-linear-gradient(0deg, #2a2547, #2a2547 10px, #3a2761 10px, #3a2761 13px) 
+        box-shadow: inset 0px 0px 2px 4px rgb(0 0 0 /.2)
+        text-align: center
+        color: white
+        overflow: hidden
+
+        &>span
+            transition: .5s
+            font-size: 10px
+            width: 100%
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+
+            &.close
+                transition: .5s
+                margin-top: -50px
+
+
     &>.screen
+        caret-color: white !important
         text-align: right
         border: none !important
         outline: none !important
@@ -35,7 +62,7 @@
                     color: white
                     font-size: 20px
                     cursor: pointer
-                &>*:hover 
+                &>*:hover
                     color: #4193ff !important
                 &>*:active
                     transform: scale(0.9)

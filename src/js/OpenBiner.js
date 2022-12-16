@@ -64,57 +64,67 @@ class Biner {
                 ii = Number(b[x]);
 
             // if it can't be reduce
-            if( i < ii) {
+            if (i < ii) {
 
                 // collect unborrowable index elements
-                let notEnaught = [];
+                let notEnaught = [], keyColect = [];
 
-                for (let _x = x; x > 0; _x--) {
 
-                    if (Number(a[_x]) > 0 ) {
+                for (let _x = x; _x >= 0; _x--) {
+
+                    if (Number(a[_x]) > 0) {
                         a[_x] = '0'; // replace borrowed value to zero
                         borrow += 1;
+                        notEnaught = keyColect;
                         break; // exit loop
                     }
 
                     // add index unborrowable
-                    notEnaught.push(_x);
+                    keyColect.push(_x);
                 }
 
                 // replace unborrowable element to 1
-                notEnaught.forEach ( _x => {
+                notEnaught.forEach(_x => {
                     a[_x] = '1';
                 });
+
+                if (notEnaught.length <= 0) {
+                    borrow -= 1;
+                }
+
             }
 
-            if (i == 1 && ii == 1 ) {
+            if (i == 1 && ii == 1) {
 
                 deducted += "0";
 
-            } else if( i == 1 && ii == 0 ) {
+            } else if (i == 1 && ii == 0) {
 
                 deducted += "1";
 
-            } else if(i == 0 && ii == 1 ) {
+            } else if (i == 0 && ii == 1) {
 
                 // this value can't subtracted
                 // so we need to check was borrowed
 
-                if ( borrow > 0 ) { //if borrow is not zero add 1 to value
+                if (borrow > 0) { //if borrow is not zero add 1 to value
 
                     deducted += "1";
                     borrow -= 1;
 
-                }
+                } else deducted += "-0";
 
-            } else if( i == 0 && ii == 0 ) {
+            } else if (i == 0 && ii == 0) {
 
                 deducted += "0";
 
-             }
+            }
         }
 
-        this.value = this.__flip__(deducted);
+        if (Number(deducted) > 0)
+            this.value = this.__flip__(deducted);
+        else
+            this.value = deducted;
 
     }
 
