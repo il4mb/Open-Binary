@@ -179,7 +179,7 @@ public final class OpenBiner {
     public int toInteger() {
         return Integer.parseInt(binary);
     }
-    
+
     public String toString() {
         return binary;
     }
