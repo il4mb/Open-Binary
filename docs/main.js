@@ -1,5 +1,3 @@
-import { DOM } from "./node_modules/newdom/nativeJS.js";
-
 window.addEventListener('load', () => {
 
     let content = DOM("div", {
