@@ -150,6 +150,8 @@ window.addEventListener('load', () => {
     });
 
     document.body.prepend(navbar, content);
+
+    print("WELCOME");
 });
 
 var isFinal = false;

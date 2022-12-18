@@ -1,11 +1,13 @@
+package com.ilh4mb;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public final class OpenBiner {
+public final class OpenBinary {
 
     public String binary;
 
-    OpenBiner(String binary) {
+    OpenBinary(String binary) {
 
         this.binary = binary;
     }

@@ -4,8 +4,13 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
-        
+        {
+            "type": "java",
+            "name": "Launch test",
+            "request": "launch",
+            "mainClass": "com.ilh4mb.test",
+            "projectName": "Open Binary_1fa7db5b"
+        },
         {
             "type": "node",
             "request": "launch",
