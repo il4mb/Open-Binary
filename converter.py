@@ -66,7 +66,6 @@ def DesimalToBinary(desimal) :
     return _final
 
 
-
 def BinaryToDesimal(binary) :
     libi = list(binary)
 
@@ -151,7 +150,7 @@ def BinaryToHexadesimal(binary) :
         if val > 9 :
 
             Hx = "?"
-            
+
             if val == 10 : Hx = "A"
             elif val == 11 : Hx = "B"
             elif val == 12 : Hx = "C"
@@ -163,7 +162,3 @@ def BinaryToHexadesimal(binary) :
         
     return "".join(str(x) for x in output)
 
-
-x = BinaryToHexadesimal('111101100101110011000011101100100111100101')
-
-print(x)

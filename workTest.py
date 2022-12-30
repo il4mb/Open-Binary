@@ -38,4 +38,5 @@ for key, x in enumerate(re) :
 
     converted[key] = bin
 
-# 11111 = 31
+
+print(converted)
