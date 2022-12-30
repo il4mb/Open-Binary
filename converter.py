@@ -64,3 +64,106 @@ def DesimalToBinary(desimal) :
                 _final.append(x)
                 
     return _final
+
+
+
+def BinaryToDesimal(binary) :
+    libi = list(binary)
+
+    out = 0
+    for x in range(len(libi) -1, -1, -1) :
+
+        ref = 2**((len(libi) -x)-1)
+
+        if int(libi[x]) > 0 :
+            out += ref
+
+    return out
+
+
+def BinaryToOktal(binary) :
+
+    remaind = len(binary)%3
+
+    if remaind > 0 :
+
+        remaind = 3 - remaind
+
+        while remaind > 0 :
+
+            binary = "0" + binary
+            remaind -=1
+
+
+    libi = list(binary)
+
+    output = tempList(int(len(libi)/3))
+    idx = len(output) -1
+
+    for x in range(len(libi)-1, -1, -1) :
+
+        ref = 2**( 2- x%3)
+
+        if int(libi[x]) == 1 :
+
+            output[idx] += ref
+
+        if x%3 == 0 :
+
+            idx -=1
+
+    return "".join(str(x) for x in output)
+
+
+def BinaryToHexadesimal(binary) :
+
+    remaind = len(binary)%4
+
+    if remaind > 0 :
+
+        remaind = 4 - remaind
+
+        while remaind > 0 :
+
+            binary = "0" + binary
+            remaind -=1
+
+
+    libi = list(binary)
+
+    output = tempList(int(len(libi)/4))
+    idx = len(output) -1
+
+    for x in range(len(libi)-1, -1, -1) :
+
+        ref = 2**( 3 - x%4)
+
+        if int(libi[x]) == 1 :
+
+            output[idx] += ref
+
+        if x%4 == 0 :
+
+            idx -=1
+        
+    for key, val in enumerate(output) :
+
+        if val > 9 :
+
+            Hx = "?"
+            
+            if val == 10 : Hx = "A"
+            elif val == 11 : Hx = "B"
+            elif val == 12 : Hx = "C"
+            elif val == 13 : Hx = "D"
+            elif val == 14 : Hx = "E"
+            elif val == 15 : Hx = "F"
+
+            output[key] = Hx
+        
+    return "".join(str(x) for x in output)
+
+
+x = BinaryToHexadesimal('111101100101110011000011101100100111100101')
+
+print(x)

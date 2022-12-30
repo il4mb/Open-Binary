@@ -1,6 +1,4 @@
-
 from converter import *
-
 
 binarys= [
     "1111",
